@@ -1,0 +1,1 @@
+{"name":"Local: sliding_window","url":"d:\\Coding_CPP\\sliding_window.c","tests":[{"id":1662176235805,"input":"8 3\n-2 10 1 3 2 -1 4 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding_CPP\\sliding_window.c","group":"local","local":true}

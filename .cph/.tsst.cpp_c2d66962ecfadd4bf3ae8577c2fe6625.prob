@@ -1,0 +1,1 @@
+{"name":"Local: tsst","url":"d:\\Coding_CPP\\tsst.cpp","tests":[{"id":1667369626350,"input":"34\n201\n2098765413\n1717171717171717171717171717171717171717171717171718\n0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding_CPP\\tsst.cpp","group":"local","local":true}

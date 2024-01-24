@@ -1,0 +1,1 @@
+{"name":"Local: String_match_naive","url":"d:\\Coding_CPP\\String_match_naive.cpp","tests":[{"id":1685360674659,"input":"AABAACAADAABAABA\nxy;","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding_CPP\\String_match_naive.cpp","group":"local","local":true}

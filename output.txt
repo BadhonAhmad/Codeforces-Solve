@@ -1,0 +1,6 @@
+You are given a string.You can change the strign as 
+inserts a character "." before each consonant,
+replaces all uppercase consonants with corresponding lowercase ones.
+Vowels are letters "A", "O", "Y", "E", "U", "I", and the rest are consonants. The program's input is exactly one string, it should return the output as a single string, resulting after the program's processing the initial string.
+
+Help Petya cope with this easy task.

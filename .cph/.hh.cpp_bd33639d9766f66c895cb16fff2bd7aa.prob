@@ -1,0 +1,1 @@
+{"name":"Local: hh","url":"d:\\Coding_CPP\\hh.cpp","tests":[{"id":1667540493201,"input":"3\nTom Marvolo Riddle\nI am Lord Voldemort\nI am not Harry Potter\nHi Pretty Roar to man\nHarry and Voldemort\nTom and Jerry and Harry","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding_CPP\\hh.cpp","group":"local","local":true}

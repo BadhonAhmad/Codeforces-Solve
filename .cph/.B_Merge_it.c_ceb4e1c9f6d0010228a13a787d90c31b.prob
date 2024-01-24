@@ -1,0 +1,1 @@
+{"name":"Local: B_Merge_it","url":"d:\\Coding_CPP\\B_Merge_it.c","tests":[{"id":1661245252398,"input":"2\n5\n3 1 2 3 1\n7\n1 1 1 1 1 2 2","output":"3\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding_CPP\\B_Merge_it.c","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: adjd","url":"d:\\Coding_CPP\\adjd.c","tests":[{"id":1677940688460,"input":"2\nmy name is ba\nmy name is ba","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding_CPP\\adjd.c","group":"local","local":true}
