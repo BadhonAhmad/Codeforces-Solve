@@ -19,19 +19,48 @@ int ceil_div(int a, int b) { return a % b == 0 ? a / b : a / b + 1; }
 
 void solve(){
     int n, m, k, i, j, ct = 0, f = 0, ans = 0, sm = 0, mn = LONG_LONG_MAX, mx = LONG_LONG_MIN, a, b, c, d;
-    cin >> n >> k;
-    string sk;
-    char ch = 'a';
-    for ( i = 0; i < n; i++)
-    {
-        ch = 'a';
-        for(j = 0; j < k; j++,ch++){
-            sk += ch;
+    cin >> n;
+    vector <pair <int, int> > vp(n+1),an;
+    vector<int> cum(n+1),jaderniyeche(n+1,0);
+    for(i = 1; i <= n; i++){
+        cin >> a;
+        vp[i].first = a;
+        vp[i].second = i;
+    }
+    sort(all(vp));
+    for(i = 1; i <= n; i++){
+        cum[i] = cum[i-1] + vp[i].first;
+    }
+    //prnt(cum);
+    int now ;
+    for(i = 1; i < n; i++){
+        a = cum[i];
+        b = vp[i+1].first;
+        now = a;
+        int id = vp[i].second;
+        if( a < b ){
+            an.push_back({id,i-1});
+        }
+        else{
+            ct = i - 1;
+            j = i+1;
+            while (now >= b && j <= n)
+            {
+                ct++;
+                now += vp[j].first;
+                j++;
+                b = vp[j+1].first;
+            }
+            an.push_back({id,ct});
         }
     }
-    
-    
-    cout << sk << '\n';
+
+    sort(all(an));
+    for(auto i : vp){
+        cout << i.second << ' ';
+    }
+    cout << '\n';
+
 }
 int32_t main(){
     ios::sync_with_stdio(false);

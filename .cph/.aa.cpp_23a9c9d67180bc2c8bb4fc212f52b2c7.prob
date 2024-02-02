@@ -1,1 +1,0 @@
-{"name":"Local: aa","url":"d:\\Coding_CPP\\aa.cpp","tests":[{"id":1667532998201,"input":"2\n192.168.0.100\n11000000.10101000.00000000.11001000\n65.254.63.122\n01000001.11111110.00111111.01111010\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding_CPP\\aa.cpp","group":"local","local":true}

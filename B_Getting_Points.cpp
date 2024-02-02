@@ -18,20 +18,38 @@ using namespace std;
 int ceil_div(int a, int b) { return a % b == 0 ? a / b : a / b + 1; }
 
 void solve(){
-    int n, m, k, i, j, ct = 0, f = 0, ans = 0, sm = 0, mn = LONG_LONG_MAX, mx = LONG_LONG_MIN, a, b, c, d;
-    cin >> n >> k;
-    string sk;
-    char ch = 'a';
-    for ( i = 0; i < n; i++)
-    {
-        ch = 'a';
-        for(j = 0; j < k; j++,ch++){
-            sk += ch;
-        }
+    int n, p, l, t;
+    cin >> n >> p >> l >> t;
+
+    if(n == 1){
+        cout << "0\n";
+        return;
+    }
+
+    int wek = (ceil_div(n,7)), taskerdin,wehavemxp;
+    if(wek % 2)
+        wehavemxp = (2 * t + l) * (wek/2) + t + l;
+    else{
+        wehavemxp = (2 * t + l) * (wek/2);
     }
     
-    
-    cout << sk << '\n';
+   //db(wehavemxp);
+   //db(wek);
+    if(wehavemxp == p){
+        cout << n - ceil_div(wek,2) << '\n';
+        return;
+    }
+
+    if(wehavemxp < p){
+        p -= wehavemxp;
+        n -= ceil_div(wek, 2);
+        n -= ceil_div(p,l);
+        cout << max(0ll,n) << '\n';
+    }
+    else{
+        int koidin = ceil_div(p, 2 * t + l);
+        cout << n-koidin << '\n';
+    }   
 }
 int32_t main(){
     ios::sync_with_stdio(false);

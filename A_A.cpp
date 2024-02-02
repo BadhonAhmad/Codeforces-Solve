@@ -5,7 +5,7 @@ everyone who has time makes excuses for procrastination.
 
 #include <bits/stdc++.h>
 using namespace std;
-
+int tc = 1;
 #define int long long
 #define yes cout << "YES\n"
 #define all(a) a.begin(), a.end()
@@ -18,20 +18,19 @@ using namespace std;
 int ceil_div(int a, int b) { return a % b == 0 ? a / b : a / b + 1; }
 
 void solve(){
-    int n, m, k, i, j, ct = 0, f = 0, ans = 0, sm = 0, mn = LONG_LONG_MAX, mx = LONG_LONG_MIN, a, b, c, d;
-    cin >> n >> k;
-    string sk;
-    char ch = 'a';
-    for ( i = 0; i < n; i++)
+    cout << "Case " << tc++ <<": ";
+    int p,k,d;
+    cin >> p >> k >> d;
+
+    int sm = 0,ak = 0,add = d;
+
+
+    while (sm < k)
     {
-        ch = 'a';
-        for(j = 0; j < k; j++,ch++){
-            sk += ch;
-        }
+        sm += (d);
+        ak += (add);
     }
-    
-    
-    cout << sk << '\n';
+    cout << ak + p << '\n';
 }
 int32_t main(){
     ios::sync_with_stdio(false);
@@ -39,7 +38,7 @@ int32_t main(){
 
     int T=1;
     cin>>T;
-
+    
     while(T--) 
         solve();
 

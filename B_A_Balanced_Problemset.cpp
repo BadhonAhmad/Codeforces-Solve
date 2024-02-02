@@ -18,20 +18,23 @@ using namespace std;
 int ceil_div(int a, int b) { return a % b == 0 ? a / b : a / b + 1; }
 
 void solve(){
-    int n, m, k, i, j, ct = 0, f = 0, ans = 0, sm = 0, mn = LONG_LONG_MAX, mx = LONG_LONG_MIN, a, b, c, d;
-    cin >> n >> k;
-    string sk;
-    char ch = 'a';
-    for ( i = 0; i < n; i++)
-    {
-        ch = 'a';
-        for(j = 0; j < k; j++,ch++){
-            sk += ch;
+    int n, m, k, i,x, j, ct = 0, f = 0, ans = 0, sm = 0, mn = LONG_LONG_MAX, mx = LONG_LONG_MIN, a, b, c, d;
+    cin >> x >> n;
+    
+    
+    for(int i = 1; i * i  <=  x;  i++){
+        if(x % i == 0){ 
+            d = i;
+            if(n * d <= x){
+                mx = max(mx, d);
+            }
+            d = x / i;
+            if(n * d <= x){
+                mx = max(mx, d);
+            }
         }
-    }
-    
-    
-    cout << sk << '\n';
+    }   
+    cout << mx << '\n';
 }
 int32_t main(){
     ios::sync_with_stdio(false);

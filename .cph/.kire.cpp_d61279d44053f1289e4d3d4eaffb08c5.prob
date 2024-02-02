@@ -1,1 +1,0 @@
-{"name":"Local: kire","url":"d:\\Coding_CPP\\kire.cpp","tests":[{"id":1684940562976,"input":"abcdef","output":"4\nabea"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding_CPP\\kire.cpp","group":"local","local":true}

@@ -1,51 +1,42 @@
-/*
-بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ 
-"In the name of Allah, the Most Gracious, the Most Merciful".
-
-لَا إِلَٰهَ إِلَّا ٱللَّٰهُ مُحَمَّدٌ رَسُولُ ٱللَّٰهِ
-"There is no God but Allah, and Muhammad (PBUH) is the messenger of Allah."
-
-##SALAH is the first thing you will be questioned about,
-so donot make it the last thing on your mind.##
-
-**He said, I only complain of my suffering and my grief to Allah, and 
-I know from Allah that which you do not know.**[Qur’an 12:86]
-
-##And We will surely test you with something of fear and hunger and a loss of wealth and
-lives and fruits, but give good tidings to the patient.##[Qur’an 2:155]
-
-#*So whoever does righteous deeds while he is a believer – no denial will 
-there be for his effort, and indeed We, of it, are recorders.*#[Qur’an 21:94]
-**/
-#include<bits/stdc++.h>
-#define fastio            ios_base::sync_with_stdio(false); cin.tie(NULL);
-#define ll                long long
-#define ull               unsigned long long
-#define ld                long double
-#define vll               vector<ll>
-#define all(a)            a.begin(),a.end()
-#define pb(a)             push_back(a)
-#define e endl
-#define yes cout<<"YES"<<endl
-#define no cout<<"NO"<<endl
+#include <bits/stdc++.h>
+#define fastio  ios_base::sync_with_stdio(false); cin.tie(NULL);
+#define int long long
+#define vll vector<int>
+#define all(a) a.begin(), a.end()
+#define pb(a) push_back(a)
+#define nl cout<<"\n"
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
+#define as cout << ans << "\n"
+#define yn cout << (f? "YES":"NO") << "\n"
+const int N=2e5+10;
 using namespace std;
-
-int main()
+int32_t main()
 {
     fastio;
-    ll cnt=0,f=0,sum=0,ans=0,t,x,y,z,i,j,k,a,b,c,n;
-    cin>>n>>t;
-    ll arr[n];
-    for ( i = 0; i < n; i++)
-    {
-        cin>>arr[i];
+    int ct,tc,f,sum,t,i,j,k,a,b,c,d,n,m;
+    int x,y;
+    double z=0;
+    scanf("%lld%lld", &a, &b);
+    vll ar(a);
+    for(i = 0; i < a; i++){
+        scanf("%lld", &ar[i]);
     }
-    sort(arr,arr+n);
-    if(arr[0]==0 && arr[n-1]==t){
-        
-    }
+    sort(all(ar));
     
+    z = LONG_LONG_MIN;
+    for(i = 1; i < a; i++){
+        if(ar[i]-ar[i-1]>z){
+            z = ar[i] - ar[i - 1];
+        }
+    }
+    int  ans = max(ar[0] - 0, b - ar[a- 1]);
+    z /= 2;
+    if(z>ans)
+        cout<<setprecision(10)<<fixed<<z;
+    else
+        cout<<setprecision(10)<<fixed<<(double)ans;
+      
     return 0;
 }
 
-//[All] praise is [due] to Allah, Lord of the worlds##[Qur’an 1:1]

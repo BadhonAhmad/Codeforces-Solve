@@ -19,19 +19,36 @@ int ceil_div(int a, int b) { return a % b == 0 ? a / b : a / b + 1; }
 
 void solve(){
     int n, m, k, i, j, ct = 0, f = 0, ans = 0, sm = 0, mn = LONG_LONG_MAX, mx = LONG_LONG_MIN, a, b, c, d;
-    cin >> n >> k;
-    string sk;
-    char ch = 'a';
-    for ( i = 0; i < n; i++)
-    {
-        ch = 'a';
-        for(j = 0; j < k; j++,ch++){
-            sk += ch;
+    string s;
+    cin >> s;
+    int one = count(s.begin(),s.end(),'1');
+    int zero = count(s.begin(),s.end(),'0');
+    n = s.size();
+    if(one == zero){
+        cout << "0\n";
+        return;
+    }
+    for(i = 0; i < n; i++){
+        if(s[i] == '1' ){
+            if(zero > 0 ){
+                zero--;
+            }
+            else{
+                ct += one;
+                break;
+            }
+        }
+        else {
+            if(one > 0){
+                one--;
+            }
+            else{
+                ct += zero;
+                break;
+            }
         }
     }
-    
-    
-    cout << sk << '\n';
+    cout << ct << '\n';
 }
 int32_t main(){
     ios::sync_with_stdio(false);

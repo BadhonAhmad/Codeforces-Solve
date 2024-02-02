@@ -1,1 +1,0 @@
-{"name":"Local: LCS","url":"d:\\Coding_CPP\\LCS.cpp","tests":[{"id":1684936844667,"input":"AGGTAB\nGXTXAYB","output":"GTAB\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding_CPP\\LCS.cpp","group":"local","local":true}
