@@ -19,54 +19,37 @@ int ceil_div(int a, int b) { return a % b == 0 ? a / b : a / b + 1; }
 
 void solve(){
     int n, m, k, i, j, ct = 0, f = 0, ans = 0, sm = 0, mn = LONG_LONG_MAX, mx = LONG_LONG_MIN, a, b, c, d;
-    cin >> n >> m >> k;
-    a = 0,b = 0, c = 0, d = 0;
-    vector <int> v(n),vv(m);
-    map <int, int> mp1,mp2;
-    vector<int> s1(k+1),s2(k+1);
+    cin >> n >> m;
+    multiset<int > ng,nm;
     for(i = 0; i < n; i++){
-        cin >> v[i];
-        if(v[i] <= k/2 && !mp1[v[i]] ){
-            a ++ ;
-            s1[v[i]] = 1;
-        }
-        else if(!mp1[v[i]] && v[i] > k/2 && v[i] <= k){
-            b++;
-            s2[v[i]] = 1;
-        }
-        mp1[v[i]]++;
+        cin >> a;
+        ng.insert(a);
     }
-    for(i = 0; i < m; i++){
-        cin >> vv[i];
-        if(vv[i] > k/2  && !mp2[vv[i]] && vv[i] <= k){
-            c++;
-            s1[vv[i]] = 1;
-        }
-        else if(!mp2[vv[i]] && vv[i] <= k/2){
-            d++;
-            s2[vv[i]] = 1;
-        }
-        mp2[vv[i]]++;
+    for(j = 0; j < m; j++){
+        cin >> a ;
+        nm.insert(a);
     }
-    int f1 = 0,f2 = 0;
-    for(i = 1; i <= k; i++){
-        if(!s1[i]){
-            f1 = 1;
-        }
-    }
-    for(i = 1; i <= k; i++){
-        if(!s2[i]){
-            f2 = 1;
-        }
-    }
-    if(f1 && f2){
-        no;
-    }
-    else yes;
 
-
-
-
+    while (ng.size() && nm.size())
+    {
+        a = *ng.begin();
+        b = *nm.begin();
+        if(a > b){
+            nm.erase(nm.begin());
+        }
+        else if(a < b){
+            ng.erase(ng.begin());
+        }
+        else{
+            nm.erase(nm.begin());
+        }
+    }
+    if(ng.size()){
+        cout << "Godzilla\n";
+    }
+    else{
+        cout << "MechaGodzilla\n";
+    }
 }
 int32_t main(){
     ios::sync_with_stdio(false);

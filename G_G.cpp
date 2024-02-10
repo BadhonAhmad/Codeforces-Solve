@@ -6,11 +6,11 @@ everyone who has time makes excuses for procrastination.
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int long long
-#define yes cout << "Yes\n"
+// #define int long long
+#define yes cout << "YES\n"
 #define all(a) a.begin(), a.end()
 #define allr(a) a.rbegin() , a.rend()
-#define no cout << "No\n"
+#define no cout << "NO\n"
 #define prnt(v) for(auto it : v) cout<<it<<" ";cout<<"\n";
 #define db(x) cout << #x << " = " << x << " , " << '\n';
 #define db2(x,y) cout<<#x<<"="<<x<<","<<#y<<"="<<y<<'\n'
@@ -18,16 +18,12 @@ using namespace std;
 int ceil_div(int a, int b) { return a % b == 0 ? a / b : a / b + 1; }
 
 void solve(){
-    int n, k, i;
-    cin >> n >> k;
-    vector <int> v(n);
-    for(i = 0; i < n; i++){
-        cin >> v[i];
-    }
-    if(k > 3){
-        yes;
-    }
-    else no;
+    int n, m, k, i, j, ct = 0, f = 0, ans = 0, sm = 0, mn = LONG_LONG_MAX, mx = LONG_LONG_MIN, a, b, c, d;
+    cin >> n >> m;
+    string s;
+    cin >> s;
+    vector<vector<int>> v(0,vector<int>(0));
+
 }
 int32_t main(){
     ios::sync_with_stdio(false);
